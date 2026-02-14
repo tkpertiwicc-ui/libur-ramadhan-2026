@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>TK PERTIWI TAPEN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- OVERLAY MUSIK -->
+<div id="musicOverlay">
+    <div class="overlay-content">
+        <div class="icon">🔊</div>
+        <div>Klik di mana saja untuk memulai musik</div>
+    </div>
+</div>
+
+<!-- EFFECT LAYER (di depan background tapi di belakang konten) -->
+<div id="effectLayer">
+    <div class="sun"></div>
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+
+    <!-- Orang menabuh bedug kiri bawah -->
+    <div class="person-bedug"></div>
+
+    <!-- Orang memanjatkan doa kanan bawah -->
+    <div class="person-doa"></div>
+
+    <!-- Orang terawih kanan bawah -->
+    <div class="person-terawih"></div>
+
+    <!-- Orang ucapan maaf bawah -->
+    <div class="ucapan-maaf-person"></div>
+</div>
+
+<!-- Konten -->
+<div class="container">
+    <h1 class="title">TK PERTIWI TAPEN</h1>
+
+    <div class="card imlek">
+        <h2>Libur Hari Raya Imlek</h2>
+        <p>16 - 17 Februari 2026</p>
+        <button class="calendar-btn" data-dates="2026-02-16,2026-02-17">Lihat Kalender</button>
+    </div>
+
+    <div class="card puasa">
+        <h2>Libur Permulaan Puasa</h2>
+        <p>18 - 21 Februari 2026</p>
+        <button class="calendar-btn" data-dates="2026-02-18,2026-02-21">Lihat Kalender</button>
+    </div>
+
+    <div class="back-school">Back To School 🎒</div>
+
+    <div class="card masuk">
+        <h2>Masuk Kembali</h2>
+        <p>Senin, 23 Februari 2026</p>
+        <button class="calendar-btn" data-dates="2026-02-23">Lihat Kalender</button>
+    </div>
+</div>
+
+<!-- MODAL CALENDAR -->
+<div id="calendarModal">
+    <div class="calendar-content">
+        <span class="close-btn">&times;</span>
+        <div id="calendarGrid" class="calendar-grid"></div>
+    </div>
+</div>
+
+<audio id="bgMusic" loop preload="auto">
+    <source src="audio/ramadhan-tiba.mp3" type="audio/mpeg">
+</audio>
+
+<script src="js/script.js"></script>
+</body>
+</html>
