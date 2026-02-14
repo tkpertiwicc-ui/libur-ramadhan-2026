@@ -31,16 +31,27 @@ const closeBtn = modal.querySelector(".close-btn");
 const calendarGrid = document.getElementById("calendarGrid");
 const daysInFeb2026 = 28;
 
-// global array cuma untuk alert
-const liburDates = ["2026-02-16","2026-02-17","2026-02-18","2026-02-19","2026-02-20","2026-02-21"];
+// ==============================
+// Array global untuk alert
+// ==============================
+const liburDates = [
+  "2026-02-16",
+  "2026-02-17",
+  "2026-02-18",
+  "2026-02-19",
+  "2026-02-20",
+  "2026-02-21"
+];
 const masukDates = ["2026-02-23"];
 
-// EVENT UNTUK TIAP TOMBOL KALENDER
+// ==============================
+// Event tombol kalender
+// ==============================
 calendarButtons.forEach(btn => {
     btn.addEventListener("click", () => {
         calendarGrid.innerHTML = "";
 
-        // ambil tanggal yang mau di-highlight cuma dari tombol itu
+        // Ambil tanggal yang mau di-highlight dari tombol ini saja
         const highlightDates = btn.dataset.dates.split(",");
 
         for (let day = 1; day <= daysInFeb2026; day++) {
@@ -49,7 +60,7 @@ calendarButtons.forEach(btn => {
             const fullDate = `2026-02-${day.toString().padStart(2,"0")}`;
             div.classList.add("calendar-day");
 
-            // kasih warna MERAH/Hijau cuma kalau ada di tombol ini
+            // kasih warna MERAH/Hijau hanya dari tombol ini
             if (highlightDates.includes(fullDate)) {
                 if (masukDates.includes(fullDate)) {
                     div.classList.add("highlight-green");
@@ -58,7 +69,7 @@ calendarButtons.forEach(btn => {
                 }
             }
 
-            // klik tanggal → alert tetap dari array global
+            // klik tanggal → alert
             div.addEventListener("click", () => {
                 if (liburDates.includes(fullDate)) {
                     alert(`Tanggal ${fullDate} adalah hari libur`);
@@ -76,7 +87,9 @@ calendarButtons.forEach(btn => {
     });
 });
 
+// ==============================
 // CLOSE MODAL
+// ==============================
 closeBtn.addEventListener("click", () => {
     modal.style.display = "none";
 });
