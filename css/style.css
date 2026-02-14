@@ -240,9 +240,12 @@ body {
 }
 
 .back-school {
-    font-size: 40px;
+    font-family: 'Fredoka', sans-serif; /* sama tapi bisa ganti style */
+    font-size: 50px;                   /* lebih gede dari sebelumnya */
+    font-weight: 700;                   /* tebel biar mirip judul */
+    color: #ffcc00;                     /* warna emas kayak judul */
+    text-shadow: 3px 3px #000;          /* shadow biar menonjol */
     margin: 30px;
-    color: #6c5ce7;
     animation: pulse 2s infinite;
     position: relative;
     z-index: 2;
