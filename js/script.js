@@ -51,8 +51,8 @@ calendarButtons.forEach(btn => {
     btn.addEventListener("click", () => {
         calendarGrid.innerHTML = "";
 
-        // Ambil tanggal yang mau di-highlight dari tombol ini saja
-        const highlightDates = btn.dataset.dates.split(",");
+        // Ambil tanggal yang mau di-highlight dari tombol ini saja, hapus spasi
+        const highlightDates = btn.dataset.dates.split(",").map(d => d.trim());
 
         for (let day = 1; day <= daysInFeb2026; day++) {
             const div = document.createElement("div");
@@ -93,4 +93,3 @@ calendarButtons.forEach(btn => {
 closeBtn.addEventListener("click", () => {
     modal.style.display = "none";
 });
-
